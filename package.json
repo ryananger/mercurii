@@ -6,7 +6,7 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "start": "webpack --mode=development -w",
+    "start": "webpack --mode=production -w",
     "dev": "webpack serve --open",
     "server": "node server/index.js -w",
     "deploy": "gh-pages -d client/dist"
