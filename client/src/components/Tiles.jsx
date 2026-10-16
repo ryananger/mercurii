@@ -17,7 +17,7 @@ const Tiles = function() {
     return (
       <div className='tiles v'>
         <Logo num={0}/>
-        <Tile content={content.intro} num={1}/>
+        <Tile className='introTile' content={content.intro} num={1}/>
         <Services num={2}/>
         <Process num={3}/>
         <Projects num={4}/>
@@ -30,7 +30,7 @@ const Tiles = function() {
     <div className='tiles v'>
       <div className='tileRow h'>
         <Logo num={0}/>
-        <Tile content={content.intro} num={1}/>
+        <Tile className='introTile' content={content.intro} num={1}/>
       </div>
       <div className='tileRow h'>
         <Services num={2}/>

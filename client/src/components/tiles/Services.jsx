@@ -17,19 +17,12 @@ const Services = function({num}) {
 
   if (st.isMobile) {
     return (
-      <div className={`tile serviceTile 'v'}`}>
-        <div className={`tileContentContainer visible h`}>
-          <div className='tileContent services h'>
-            {serviceDetails.map((detail, index) => (
-              <div
-                key={detail}
-                className='service v'
-              >
-                {['Web Development', 'Software', 'Automation', 'AI Integration', 'IT Services'][index]}
-              </div>
-            ))}
+      <div className='mobileItemSection mobileServices v'>
+        {serviceDetails.map((detail, index) => (
+          <div key={detail} className='tile service serviceItem v'>
+            <b>{['Web Development', 'Software', 'Automation', 'AI Integration', 'IT Services'][index]}</b>
           </div>
-        </div>
+        ))}
       </div>
     )
   }

@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 
 import st from 'ryscott-st';
 
-const Tile = function({content, num}) {
+const Tile = function({content, num, className = ''}) {
   const [isOpen, setIsOpen] = useState(st.isMobile ? true : false);
   const [isLoaded, setIsLoaded] = useState(st.isMobile ? true : false);
 
@@ -22,7 +22,7 @@ const Tile = function({content, num}) {
   }, [num]);
 
   return (
-    <div className={`tile ${!isOpen ? 'closed v' : 'v'}`}>
+    <div className={`tile ${className} ${!isOpen ? 'closed v' : 'v'}`}>
       <div className={`tileContentContainer ${isLoaded ? 'visible' : 'hidden'} h`}>
         {isLoaded && content ? content : 'This is a test tile.'}
       </div>

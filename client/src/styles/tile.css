@@ -364,37 +364,137 @@ textarea:focus {
     box-sizing: border-box;
   }
 
+  .introTile {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
   .logo {
     height: 25vh;
     width: 25vh;
     margin: 37.5vh 0;
   }
 
-  .processInfo {
-    padding: 4px;
+  .mobileItemSection {
+    width: 90%;
+    margin: 1vh 0;
+    gap: 12px;
   }
 
-  .processItem {
-    margin: 4px;
+  .mobileItemSection .tile {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 16px;
+    flex: none;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+  }
+
+  .mobileServices {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin: 48px 0;
+  }
+
+  .mobileServices .serviceItem {
+    width: auto;
+    flex: 1 1 auto;
+    padding: 4px 6px;
+    margin: 2px 1px;
+  }
+
+  .processIcon {
     width: 48px;
+  }
+
+  .itemDetail {
+    padding: 0;
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    font-weight: 400;
+    text-align: center;
   }
   
   .processTitle {
     font-size: 0.8rem;
   }
 
-  .projectTile {
-    height: unset;
-    aspect-ratio: 16/9;
+  .projectCarousel {
+    width: 100%;
+    margin: 48px 0;
+    padding: 4px 0;
+    overflow: hidden;
+    touch-action: pan-y pinch-zoom;
+    user-select: none;
+    flex: none;
+  }
+
+  .projectCarouselTrack {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .projectCarouselTrack.isSettling {
+    transition: transform 0.25s ease;
+  }
+
+  .projectCarouselTrack .projectTile {
+    flex: 0 0 100%;
+    min-width: 0;
+    height: auto;
+    margin: 0;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .projectCarouselTrack.isSettling {
+      transition: none;
+    }
+  }
+
+  .projects {
+    height: auto;
+    flex-direction: column;
+    gap: 12px;
   }
 
   .projectSlideshow {
-    width: unset;
+    width: 100%;
+    height: auto;
     aspect-ratio: 16/9;
+    box-sizing: border-box;
+  }
+
+  .projectScreenshot {
+    cursor: default;
+  }
+
+  .projectInfo {
+    width: 100%;
+    padding: 0 8px 8px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .projectInfo h3 {
+    padding: 0 0 4px;
+  }
+
+  .projectInfo p {
+    padding: 0;
+    font-size: 0.85rem;
+    line-height: 1.5;
   }
 
   .contactTile {
     height: 200px;
     margin-bottom: 10vh;
+    padding: 12px 0;
   }
 }

@@ -25,21 +25,15 @@ const Process = function({content, num}) {
 
   if (st.isMobile) {
     return (
-      <div className={`tile processTile v`}>
-        <div className={`tileContentContainer visible v`}>
-          <b>Our Process</b>
-          <div className='processInfo h'>
-            {processItems.map((item) => (
-              <div
-                key={item.title}
-                className='processItem v'
-              >
-                <div className='processIcon v'>{item.icon}</div>
-                <b className='processTitle'>{item.title}</b>
-              </div>
-            ))}
+      <div className='mobileItemSection v'>
+        <b>Our Process</b>
+        {processItems.map((item) => (
+          <div key={item.title} className='tile processItem v'>
+            <div className='processIcon v'>{item.icon}</div>
+            <b className='processTitle'>{item.title}</b>
+            <p className='itemDetail'>{item.detail}</p>
           </div>
-        </div>
+        ))}
       </div>
     )
   }
