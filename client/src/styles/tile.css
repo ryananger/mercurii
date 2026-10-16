@@ -373,6 +373,10 @@ textarea:focus {
     height: 25vh;
     width: 25vh;
     margin: 37.5vh 0;
+    /* Keep the first screen centered within the visible browser viewport. */
+    height: 25dvh;
+    width: 25dvh;
+    margin: 37.5dvh 0;
   }
 
   .mobileItemSection {
