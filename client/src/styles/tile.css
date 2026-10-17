@@ -497,8 +497,22 @@ textarea:focus {
   }
 
   .contactTile {
-    height: 200px;
+    height: 240px;
     margin-bottom: 10vh;
     padding: 12px 0;
+  }
+
+  .contactTile input {
+    height: 32px;
+    flex: none;
+  }
+
+  .contactTile textarea {
+    margin: 2px 0;
+    height: 100%;
+  }
+
+  .sendButton {
+    margin: 12px 0 2px;
   }
 }
